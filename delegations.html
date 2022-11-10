@@ -24,182 +24,168 @@
 
 <body>
 
-    <header class="navbar sticky-top bg-light  flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">INAHINA</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <input class="form-control form-control-light w-100 rounded-0 border-0" type="text" placeholder="Search"
-            aria-label="Search">
-        <div class="navbar-nav">
-            <div class="nav-item text-nowrap">
-                <div class="dropdown text-center fs-5 d-flex mx-3">
-                    <a href="# " class="mx-2"><i class="bi-envelope"></i></a>
-                    <a href="# " class="mx-2"><i class="bi-bell"></i></a>
-                    <a href="#" class="d-block text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Elton Macuacua
-                    </a>
-                    <ul class="dropdown-menu text-small">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-
-                </div>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white sticky-top" id="sidebar-wrapper">
+          <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+              class="fas fa-coins me-2"></i>INAHINA</div>
+          <div class="list-group list-group-flush my-3 sticky-top">
+            <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="users.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                class="fas fa-users me-2"></i>Utilizadores</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                class="fas fa-chart-line me-2"></i>Analytics</a>
+            <a href="delegations.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"><i
+                class="fas fa-project-diagram me-2"></i>Delegações</a>
+            <a href="notification.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+              <i class="fas fa-envelope me-2"></i>Messagens</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                class="fas fa-power-off me-2"></i>Sair</a>
+          </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+    
+        <!-- Page Content -->
+        <main id="page-content-wrapper">
+          <!-- Navbar start -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+              <h2 class="fs-2 m-0">Dashboard</h2>
+              <input class="form-control w-100 mx-3 py-2" type="search" placeholder="Procurar..." id="Mail-rearch">
             </div>
-        </div>
-    </header>
-
-    <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3 sidebar-sticky">
-                    <ul class="nav flex-column fs-5">
-                        <li class="nav-item ">
-                            <a class="nav-link active" aria-current="page" href="index.html">
-                                <span class="align-text-bottom fa fa-tachometer-alt me-2"></span>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="users.html">
-                                <span class="align-text-bottom fa fa-users me-2"></span>
-                                Utilizadores
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="delegations.html">
-                                <span class="align-text-bottom fa fa-home me-2"></span>
-                                Delegações
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="notification.html">
-                                <span class="align-text-bottom fa fa-envelope-open-text me-2"></span>
-                                Notifiçacões
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-                        <span>Saved reports</span>
-                        <a class="link-secondary" href="#" aria-label="Add a new report">
-                            <span data-feather="plus-circle" class="align-text-bottom"></span>
-                        </a>
-                    </h6>
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Current month
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Last quarter
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Social engagement
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text" class="align-text-bottom"></span>
-                                Year-end sale
-                            </a>
-                        </li>
-                    </ul>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse show" id="navbarSupportedContent" style="">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                      <i class="fa fa-bell me-lg-2"></i>
+                      <span class="d-none d-lg-inline-flex">Notificacoes</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                      <a href="#" class="dropdown-item">
+                          <h6 class="fw-normal mb-0">Profile updated</h6>
+                          <small>15 minutes ago</small>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                          <h6 class="fw-normal mb-0">New user added</h6>
+                          <small>15 minutes ago</small>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                          <h6 class="fw-normal mb-0">Password changed</h6>
+                          <small>15 minutes ago</small>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item text-center">See all notifications</a>
+                  </div>
+              </div>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user me-2"></i>John Doe
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- Navbar End -->
+    
+         <!-- Delegations view Start -->
+         <section class="container-fluid ">
+            <h3 class="my-2 ms-3 py-4">Delegações</h3>
+            <div class="row g-4">
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-light rounded h-100 p-4">
+                        <h6 class="mb-4">Delegaçao de Maputo</h6>
+                        <h6>Localizacao:Zona Sul</h6>
+                        <h6> Taxa de navegacao:8%</h6>
+                        <h6>Numero de Portos:1 Porto </h6>
+                        <h6>Telefone:9893767383</h6>
+                        <h6>Email:mapt@gmail.com</h6>
+                        <form>
+                            <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
+                        </form>
+                    </div>
                 </div>
-            </nav>
-
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-
-                <!-- Message view Start -->
-                <section class="container-fluid ">
-                    <h3 class="my-2 ms-3 py-4">Delegações</h3>
-                    <div class="row g-4">
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light rounded h-100 p-4">
-                                <h6 class="mb-4">Delegaçao de Maputo</h6>
-                                <h6>Localizacao:Zona Sul</h6>
-                                <h6> Taxa de navegacao:8%</h6>
-                                <h6>Numero de Portos:1 Porto </h6>
-                                <h6>Telefone:9893767383</h6>
-                                <h6>Email:mapt@gmail.com</h6>
-                                <form>
-                                    <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light rounded h-100 p-4">
-                                <h6 class="mb-4">Delegaçao da Beira </h6>
-                                    <h6>Localizacao: Zona Centro</h6>
-                                    <h6> Taxa de navegacao:5%</h6>
-                                    <h6>Numero de Portos:1 Porto</h6>
-                                    <h6>Telefone:86773829</h6>
-                                    <h6>Email:beira@gmail.com</h6>
-                                    <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
-                                    
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light rounded h-100 p-4">
-                                <h6 class="mb-4">Delegaçao de Pemba </h6>
-                                    <h6>Localizacao:Zona Norte </h6>
-                                    <h6> Taxa de navegacao:5%</h6>
-                                    <h6>Numero de Portos:3 Portos</h6>
-                                    <h6>Telefone:878845362</h6>
-                                    <h6>Email:pembajos@gmail.com </h6>
-                                    <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light rounded h-100 p-4">
-                                <h6 class="mb-4">Delegacao de Quelimane</h6>
-                                    <h6>Localizacao:Zona Centro</h6>
-                                    <h6> Taxa de navegacao:5%</h6>
-                                    <h6>Numero de Portos:1 Porto</h6>
-                                    <h6>Telefone:87888353</h6>
-                                    <h6>Email:delpemba@gmail.com</h6>
-                                    <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
-                            </div>
-                        </div> 
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-light rounded h-100 p-4">
+                        <h6 class="mb-4">Delegaçao da Beira </h6>
+                            <h6>Localizacao: Zona Centro</h6>
+                            <h6> Taxa de navegacao:5%</h6>
+                            <h6>Numero de Portos:1 Porto</h6>
+                            <h6>Telefone:86773829</h6>
+                            <h6>Email:beira@gmail.com</h6>
+                            <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
+                            
                     </div>
-                </section>
-                <!-- Message view End -->
-
-                <!-- Footer Start -->
-                <footer class="pt-4">
-                    <div class="d-flex flex-column flex-sm-row justify-content-between py-3 border-top">
-                        <p>&copy; 2022 Company, Inc. All rights reserved.</p>
-                        <ul class="list-unstyled d-flex">
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                        <use xlink:href="#twitter" />
-                                    </svg></a></li>
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                        <use xlink:href="#instagram" />
-                                    </svg></a></li>
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                        <use xlink:href="#facebook" />
-                                    </svg></a></li>
-                        </ul>
+                </div>
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-light rounded h-100 p-4">
+                        <h6 class="mb-4">Delegaçao de Pemba </h6>
+                            <h6>Localizacao:Zona Norte </h6>
+                            <h6> Taxa de navegacao:5%</h6>
+                            <h6>Numero de Portos:3 Portos</h6>
+                            <h6>Telefone:878845362</h6>
+                            <h6>Email:pembajos@gmail.com </h6>
+                            <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
                     </div>
-                </footer>
-                <!-- Footer End -->
-            </main>
-        </div>
-    </div>
+                </div>
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-light rounded h-100 p-4">
+                        <h6 class="mb-4">Delegacao de Quelimane</h6>
+                            <h6>Localizacao:Zona Centro</h6>
+                            <h6> Taxa de navegacao:5%</h6>
+                            <h6>Numero de Portos:1 Porto</h6>
+                            <h6>Telefone:87888353</h6>
+                            <h6>Email:delpemba@gmail.com</h6>
+                            <button type="submit" class="btn btn-primary">Mais Informaçoes </button>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- Delegations view End -->
+    
+          <!-- Footer Start -->
+          <footer class="pt-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-3 border-top">
+              <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                      <use xlink:href="#twitter" />
+                    </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                      <use xlink:href="#instagram" />
+                    </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                      <use xlink:href="#facebook" />
+                    </svg></a></li>
+              </ul>
+            </div>
+          </footer>
+        </main>
+      </div>
+    
+      <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+    
+        toggleButton.onclick = function () {
+          el.classList.toggle("toggled");
+        };
+      </script>
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
         integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
